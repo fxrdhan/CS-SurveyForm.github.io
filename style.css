@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    background: url(https://i.postimg.cc/pLK5drz7/wpp.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 200vh;
+    font-family: 'Poppins';
+}
+label {
+    margin-top: 0;
+    margin-bottom: 0.625rem;
+    margin-left: .625rem;
+    display: flex;
+    align-items: center;
+} 
+.space {
+    margin: .125rem;
+}
+.header {
+    width: 100%;
+    max-width: 1400px;
+    max-height: fit-content;
+    background: rgba(0, 0, 0, 0.125);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .5);
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-right: 2px solid rgba(255, 255, 255, .2);
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3.125rem auto;
+}
+.header h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.825rem;
+    margin: 1.3rem auto 0.125rem auto;
+    color: rgb(68, 57, 177);
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4);
+}
+.greetings {
+    text-align: center;
+    font-family: 'Montserrat'; 
+    font-weight: 700;
+    margin-bottom: auto;
+    color:rgb(41, 41, 41);
+}
+.description {
+    font-family: 'Montserrat';
+    text-align: center;
+    margin: 0.75rem 0.75rem 1.25rem 0.75rem;
+    color:rgb(41, 41, 41);
+    font-style: italic;
+}
+.privacyTerm {
+    font-family: 'Montserrat';
+    text-align: center;
+    font-size: 0.625rem;
+}
+.form-group {
+    width: 100%;
+    max-width: 1400px;
+    max-height: fit-content;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1.125rem auto;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-right: 2px solid rgba(255, 255, 255, .2);
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+}
+.form-group p {
+    font-size: 1.125rem;
+    background-color: transparent;
+    margin: .8rem;
+}
+.form-group select {
+    margin: .125rem .625rem .8rem;
+    padding-left: .5rem;
+    height: 2.125rem;
+    border-radius: 20px;
+    outline: 0;
+    font-family: 'Poppins';
+    background-color: transparent;  
+}
+.form-group label {
+    font-size: 1rem;
+    background-color: transparent;
+}
+#name-label, #email-label, #number-label {
+    padding: .8rem;
+}
+.form-control {
+    background-color: transparent;
+    border-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, .2125);
+    margin: 0 .8rem .8rem .8rem;
+    height: 1.5rem;
+    padding: 1rem;
+    transition: 300ms ease-in-out;
+    font-family: 'Poppins';
+}
+.option-control {
+    border-width: 2px;
+    border-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+.input-radio,
+.input-checkbox {
+    margin-right: 0.625rem;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: .125rem;
+    padding: 5rem;
+}
+.form-group input::placeholder {
+    color: rgb(255, 255, 255);
+    font-style: italic;
+}
+.form-group input:focus::placeholder {
+    color: rgb(123, 123, 123);
+    font-style: normal;
+}
+.form-group input:focus {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 100px rgba(107, 34, 196, .5),
+               -12px -12px 100px rgba(107, 34, 196, .3125);
+    border-color: rgba(107, 34, 196, 0.5);
+    background-color: transparent;
+    outline: none;
+    margin: 0 .8rem .3125rem;
+}
+.form-group option {
+    color: rgb(125, 57, 177);
+}
+.input-textarea {
+    min-height: 100px;
+    padding: 0.625rem;
+    resize: vertical;
+    background-color: transparent !important;
+    outline: none;
+    border-radius: 20px;
+    margin: .5rem;
+    font-family: Poppins;
+}
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  transition: 300ms ease-in-out;
+}
+textarea:focus {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 100px rgba(107, 34, 196, .5),
+               -12px -12px 100px rgba(107, 34, 196, .3125);
+    border-color: rgba(107, 34, 196, 0.5);
+    background-color: transparent;
+    outline: none;
+    margin: 0 .8rem .3125rem;
+}
+.submit-button {
+    background-color: rgba(53, 65, 152, 0.262);
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+    padding: .8rem;
+    border-radius: 20px;
+    color: rgb(13, 0, 255);
+}
+
+        /* SCREEN FRIENDLY */
+
+@media only screen and (max-width: 480px) {
+    .header {
+        font-size: 0.825rem;
+    }
+    .greetings, .description, .privacyTerm {
+        font-size: 0.75rem;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .header {
+        font-size: 0.825rem;
+    }
+    .greetings, .description, .privacyTerm {
+        font-size: 0.75rem;
+    }
+    .form-group input:focus, textarea:focus {
+        margin: 0 1.3125rem .3125rem;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .header {
+        font-size: 0.825rem;
+    }
+    .greetings, .description, .privacyTerm {
+        font-size: 0.75rem;
+    }
+    .form-group input:focus, textarea:focus {
+        margin: 0 1.5125rem .2125rem;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    .header {
+        font-size: 0.825rem;
+    }
+    .greetings, .description, .privacyTerm {
+        font-size: 0.75rem;
+    }
+    .form-group input:focus, textarea:focus {
+        margin: 0 2.3rem .3125rem;
+    }
+}
