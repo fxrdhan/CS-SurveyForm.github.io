@@ -1,194 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head></head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Survey Form</title>
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
   <body>
     <div class="container">
+
       <header class="header">
-        <h1 id="title" class="text-center">Survey Form</h1>
-        <p id="greetings" class="greetings text-center">
-        Terimakasih telah datang di survei kami!
-        </p>
-        <p id="description" class="description text-center">
-        Kami sangat menghargai pendapat Anda dan ingin mendengar suara dari para pengguna untuk pengembangan web kami.
-        </p>
-        <!--<p id="term" class="privacyTerm">
-        *Lihat selengkapnya tentang Kebijakan Privasi Kami.
-        </p>-->
+        <h1 id="title" class="text-center">Customer Service Survey Form</h1>
+        <p id="description" class="description text-center">Thank you for participate in our customer service survey.<span id="description" class="description text-center">Your feedback is invaluable in helping us improve our services.</span></p>
       </header>
-      <!--Form-->
+
       <form id="survey-form">
-        <div class="form-group">
-        <label id="name-label" for="name">Nama</label
-        >
-        <input
-            type="text"
-            name="name"
-            id="name"
-            class="form-control"
-            placeholder=""
-            required
-            oninvalid="setCustomValidity('Masukkan nama Anda!')"
-        />
-      </div>
-      <div class="form-group">
-          <label id="email-label" for="email">Email</label
-          >
-          <input
-          type="email"
-          name="email"
-          id="email"
-          class="form-control"
-          placeholder="example@mail.com"
-          required
-          oninvalid="setCustomValidity('Email tidak valid!')"
-          />
-      </div>
-      <div class="form-group">
-          <label id="number-label" for="number"
-          >Usia</label
-          >
-          <input
-          type="number"
-          name="age"
-          id="number"
-          min="10"
-          max="99"
-          class="form-control"
-          placeholder=""
-          />
-      </div>
-      <div class="space">
-          <label></label
-          >
-      </div>
-      <div class="form-group">
-        <p>Pilih peran yang sesuai dengan Anda</p>
-        <select id="dropdown" name="role" class="option-control" required>
-          <option class="non-select" disabled selected value>Pilih</option>
-          <option value="student">Pelajar</option>
-          <option value="job">Pekerja Penuh</option>
-          <option value="learner">Pekerja Lepas</option>
-          <option value="preferNo">Prefer not to say</option>
-          <option value="other">Lainnya</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <p>Apakah Anda merekomendasikan web kami ke teman Anda?</p>
-        <label class="radio">
-          <input
-            name="user-recommend"
-            value="definitely"
-            type="radio"
-            class="input-radio"
-            checked
-          />Tentu Saja</label
-        >
-        <label class="radio">
-          <input
-            name="user-recommend"
-            value="maybe"
-            type="radio"
-            class="input-radio"
-          />Mungkin</label
-        >
-        <label class="radio"
-          ><input
-            name="user-recommend"
-            value="not-sure"
-            type="radio"
-            class="input-radio"
-          />Tidak</label
-        >
-      </div>
-      <div class="form-group">
-        <p>
-         Apa yang Anda ingin tingkatkan dari web kami?
+        <p class="title"><b>Personal Information:</b>
+          <span class="clue">(Please provide your details for our records.)</span>
         </p>
-            <label>
-                <input
-                name="prefer"
-                value="User Interface (UI)"
-                type="checkbox"
-                class="input-checkbox"
-                />User Interface (UI)</label
-            >
-            <label
-                ><input
-                name="prefer"
-                value="Pencarian"
-                type="checkbox"
-                class="input-checkbox"
-                />Pencarian</label
-            >
-            <label>
-                <input
-                name="prefer"
-                value="Halaman utama"
-                type="checkbox"
-                class="input-checkbox"
-                />Halaman utama</label
-            >
-            <label>
-                <input
-                name="prefer"
-                value="Konten multimedia"
-                type="checkbox"
-                class="input-checkbox"
-                />Konten</label
-            >
-            <label
-                ><input
-                name="prefer"
-                value="Referensi dan sumber daya pembelajaran"
-                type="checkbox"
-                class="input-checkbox"
-                />Referensi</label
-            >
-            <label
-                ><input
-                name="prefer"
-                value="Tampilan mobile yang lebih baik"
-                type="checkbox"
-                class="input-checkbox"
-                />Tampilan mobile yang lebih baik</label
-            >
-            <label
-                ><input
-                name="prefer"
-                value="Sistem notifikasi tentang pembaruan terbaru"
-                type="checkbox"
-                class="input-checkbox"
-                />Sistem notifikasi tentang pembaruan terbaru</label
-            >
+        <div class="form-group" id="name-input">
+          <input type="text" class="input" id="noNumbersInput" placeholder="" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label class="name-label" for="name">Name</label>
         </div>
-      <div class="form-group">
-          <p>Silakan masukkan komentar atau saran Anda</p>
-          <textarea
-            id="comments"
-            class="input-textarea"
-            name="comment"
-            placeholder="Enter your comment here..."
-          ></textarea>
+
+        <div class="form-group" id="email-input">
+          <input type="email" class="input" placeholder="" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label class="email-label" for="email">Email</label>
         </div>
-        <div class="space">
-          <label></label
-          >
+        
+        <div class="form-group" id="age-input">
+          <input type="number" min="10" max="80" class="input" placeholder="" oninput="this.value=this.value.replace(/[^0-9]/g, '')" oninvalid="setCustomValidity('Your age is not yet permitted')"  required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label class="age-label" for="age">Age</label>
         </div>
+
         <div class="form-group">
-            <button type="submit" id="submit" class="submit-button">
-              Submit
-            </button>
+          <p class="title"><b>How did you hear about our customer service survey?</b><span class="clue">(Please select one option)</span></p>
+          <select id="most-like" name="mostLike" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="openSource">Open Source</option>
+          </select>
         </div>
-        <div class="space">
-            <label></label
+
+        <div class="form-group">
+          <p class="title"><b>Service Experience:</b>
+            <span class="question">Please rate your overall experience with our customer service</span>
+            <span class="clue">(Scale of 1 to 5, where 1 is "Poor" and 5 is "Excellent)</span>
+          </p>
+          <p class="sub-question">Overall Experience:</p>
+          <div class="rating">
+            <input type="radio" id="star5" name="service-experince" value="5">
+            <label for="star5"></label>
+            <input type="radio" id="star4" name="service-experince" value="4" checked>
+            <label for="star4"></label>
+            <input type="radio" id="star3" name="service-experince" value="3">
+            <label for="star3"></label>
+            <input type="radio" id="star2" name="service-experince" value="2">
+            <label for="star2"></label>
+            <input type="radio" id="star1" name="service-experince" value="1" >
+            <label for="star1"></label>
+          </div>
+        
+        <div class="form-group">
+          <p class="title"><b>Communication:</b>
+            <span class="question">How satisfied were you with the communication from our customer service representatives?</span>
+            <span class="clue">(Scale of 1 to 5, where 1 is "Poor" and 5 is "Excellent)</span>
+          </p>
+          <p class="sub-question">Clear and effective communication:</p>
+            <label><input name="cs-comuunication" value="poor" type="radio" class="input-radio"/>1</label>
+            <label><input name="cs-comuunication" value="fair" type="radio" class="input-radio"/>2</label>
+            <label><input name="cs-comuunication" value="neutral" type="radio" class="input-radio"/>3</label>
+            <label><input name="cs-comuunication" value="good" type="radio" class="input-radio"/>4</label>
+            <label><input name="cs-comuunication" value="excellent" type="radio" class="input-radio" checked/>5</label
             >
+          <p class="sub-question">Timely responses:</p>
+          <label><input name="cs-responses" value="poor" type="radio" class="input-radio"/>1</label>
+          <label><input name="cs-responses" value="fair" type="radio" class="input-radio"/>2</label>
+          <label><input name="cs-responses" value="neutral" type="radio" class="input-radio"/>3</label>
+          <label><input name="cs-responses" value="good" type="radio" class="input-radio"/>4</label>
+          <label><input name="cs-responses" value="excellent" type="radio" class="input-radio" checked/>5</label>
+        </div>
+
+        <div class="form-group">
+          <p class="title"><b>Problem Resolution:</b>
+            <span class="question">Please rate the quality of the problem resolution and representative's understanding:</span>
+            <span class="clue">(Scale of 1 to 5, where 1 is "Poor" and 5 is "Excellent)</span>
+          </p>
+          <p class="sub-question">Quality of Problem Resolution:</p>
+            <label><input name="solution-quality" value="poor" type="radio" class="input-radio"/>1</label>
+            <label><input name="solution-quality" value="fair" type="radio" class="input-radio"/>2</label>
+            <label><input name="solution-quality" value="neutral" type="radio" class="input-radio"/>3</label>
+            <label><input name="solution-quality" value="good" type="radio" class="input-radio"/>4</label>
+            <label><input name="solution-quality" value="excellent" type="radio" class="input-radio" checked/>5</label
+            >
+          <p class="sub-question">Representative's Understanding:</p>
+          <label><input name="respresentative" value="poor" type="radio" class="input-radio"/>1</label>
+          <label><input name="respresentative" value="fair" type="radio" class="input-radio"/>2</label>
+          <label><input name="respresentative" value="neutral" type="radio" class="input-radio"/>3</label>
+          <label><input name="respresentative" value="good" type="radio" class="input-radio"/>4</label>
+          <label><input name="respresentative" value="excellent" type="radio" class="input-radio" checked/>5</label>
+        </div>
+
+        <div class="form-group">
+          <p class="title"><b>Contact Channels: </b>
+            <span class="question">Which communication channels have you used to interact with our customer service?</span>
+            <span class="clue">(Check all that apply)</span>
+          </p>
+          <label class="checkboxes"><input name="contact-channel" value="phone" type="checkbox" class="input-checkbox"/>Phone</label>
+          <label class="checkboxes"><input name="contact-channel" value="email" type="checkbox" class="input-checkbox"/>Email</label>
+          <label class="checkboxes"><input name="contact-channel" value="live-chat" type="checkbox" class="input-checkbox"/>Live Chat</label>
+          <label class="checkboxes"><input name="contact-channel" value="socmed" type="checkbox" class="input-checkbox"/>Social Media</label>
+          <label class="checkboxes"><input name="contact-channel" value="in-person" type="checkbox" class="input-checkbox"/>In-Person</label>
+        </div>
+
+        <div class="form-group">
+          <p class="title"><b>Additional Feedback:</b>
+            <span class="question">Please provide any additional comments or suggestions regarding your customer service experience. </span>
+          </p>
+          <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+        </div>
+        
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">Submit</button>
+
+        <div class="class-group">
+          <p class="thanks">Thank you for taking the time to complete our customer service survey. Your input is highly appreciated!</p>
+        </div>
         </div>
       </form>
     </div>
   </body>
+  
+  <script>
+    const inputElement = document.getElementById('noNumbersInput');
+  
+    inputElement.addEventListener('input', function(event) {
+      let inputValue = event.target.value;
+      let sanitizedValue = inputValue.replace(/[0-9]/g, ''); 
+      
+      if (inputValue !== sanitizedValue) {
+        inputElement.value = sanitizedValue;
+      }
+    });
+  </script>  
 </html>
