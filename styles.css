@@ -167,6 +167,10 @@ button {
   margin-top: 2rem;
 }
 
+input::placeholder {
+  visibility: collapse;
+}
+
 .input {
   font-family: poppins;
   font-size: 16px;
@@ -194,9 +198,9 @@ input[type='radio'] {
   outline: none;
 }
 
-.name-label,
-.email-label,
-.age-label {
+.nameLabel,
+.emailLabel,
+.ageLabel {
   color: #999;
   font-size: 1.125rem;
   font-weight: normal;
