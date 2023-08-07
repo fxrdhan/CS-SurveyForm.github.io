@@ -18,24 +18,24 @@
           <span class="clue">(Please provide your details for our records.)</span>
         </p>
         <div class="form-group" id="name-input">
-          <input type="text" class="input" id="noNumbersInput" placeholder="" required>
+          <input type="text" class="input" id="name" placeholder="none" required>
           <span class="highlight"></span>
           <span class="bar"></span>
-          <label class="name-label" for="name">Name</label>
+          <label id="name-label" class="nameLabel" for="name">Name</label>
         </div>
 
         <div class="form-group" id="email-input">
-          <input type="email" class="input" id="email" placeholder="" required>
+          <input type="email" class="input" id="email" placeholder="none" required>
           <span class="highlight"></span>
           <span class="bar"></span>
-          <label class="email-label" for="email">Email</label>
+          <label id="email-label" class="emailLabel" for="email">Email</label>
         </div>
         
         <div class="form-group" id="age-input">
-          <input type="number" min="10" max="80" class="input" placeholder="" oninput="filterNonNumeric(this)" required>
+          <input type="number" id="number" min="10" max="80" class="input" placeholder="none" oninput="filterNonNumeric(this)" required>
           <span class="highlight"></span>
           <span class="bar"></span>
-          <label class="age-label" for="age">Age</label>
+          <label id="number-label" class="ageLabel" for="age">Age</label>
         </div>
 
         <div class="form-group">
@@ -135,7 +135,7 @@
 
         <div class="form-group">
           <p class="title"><b>How did you hear about our customer service survey?</b><span class="clue">(Please select one option)</span></p>
-          <select id="source" name="sourceForm" class="form-control" required>
+          <select id="dropdown" name="sourceForm" class="form-control" required>
             <option disabled selected value>Select an option</option>
             <option value="email-invitation">Email invitation</option>
             <option value="pop-up">Website pop-up</option>
@@ -172,7 +172,7 @@
       input.value = newValue;
     }    
 
-    const inputElement = document.getElementById('noNumbersInput');
+    const inputElement = document.getElementById('name');
   
     inputElement.addEventListener('input', function(event) {
       let inputValue = event.target.value;
