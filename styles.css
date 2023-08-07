@@ -40,6 +40,8 @@ body::before {
   box-shadow: 0 30px 45px rgba(0, 0, 0, 0.3);
   width: 100%;
   margin: 3.125em auto;
+  border-radius: 20px;
+  padding: 20px;
 }
 
 .header {
@@ -65,6 +67,8 @@ body::before {
   color: #888;
   text-align: center;
   line-height: 1.2;
+  display: inline-flex;
+  flex-direction: column;
 }
 
 .question {
@@ -76,7 +80,7 @@ body::before {
 }
 
 .form-group {
-  margin-bottom: 2rem;
+  margin: 2.125rem auto;
 }
 
 label {
@@ -97,7 +101,7 @@ label {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
   resize: vertical;
   font-family: poppins;
   font-size: 1rem;
@@ -107,18 +111,33 @@ label {
   font-family: poppins;
 }
 
-.submit-button {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
+.input-textarea:focus {
+  border: 2px solid darkgoldenrod;
+  outline: none;
+}
+
+button {
   border: none;
-  border-radius: 4px;
+  margin: 0;
+}
+
+.submit-button {
+  background-color: #333333b0;
+  color: #fff;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+  display: block;
+  width: 100%;
+  font-family: poppins;
+  font-weight: bold;
+
 }
 
 .submit-button:hover {
-  background-color: #555;
+  background-color: rgba(184, 135, 11, 0.618);
   transform: scale(1.05);
 }
 
@@ -187,6 +206,16 @@ input[type='radio'] {
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
+}
+
+select {
+  padding:.6em 1.4em.5em.8em;
+  border-radius: 10px;
+  border: 2px solid darkgoldenrod;
+}
+
+option {
+  font-family: poppins;
 }
 
 .input:focus ~ label, .input:valid ~ label {
@@ -324,9 +353,10 @@ header, #survey-form {
 .rating:not(:checked) > label {
   cursor: pointer;
   font-size: 36px;
-  transition: font-size 0.5s ease-in-out;
   color: #666;
-  margin-left: 0;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1px;
 }
 
 .rating:not(:checked) > label:before {
@@ -338,18 +368,16 @@ header, #survey-form {
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label,
 .rating > label:hover ~ input:checked ~ label {
-  color: #ff9e0b;
-  font-size: 50px;
+  color: orange;
 }
 
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
   color: darkgoldenrod;
-  font-size: 50px;
 }
 
 .rating > input:checked ~ label {
-  color: #ff9e0b;
+  color: darkgoldenrod;
 }
 
 @media (min-width: 576px) {
@@ -364,8 +392,39 @@ header, #survey-form {
   }
 }
 
-@media (min-width: 480px) {
-  form {
-    padding: 2.5rem;
+@media only screen and (max-width: 480px) {
+  .header {
+    padding-top: 0;
   }
+  .text-center {
+    font-size: .75rem;
+  }
+  .container {
+    padding: 20px;
+    max-width: 90%;
+  }
+  .title {
+    font-size: 1rem;
+  } 
+  .sub-question, 
+  .question,
+  .label,
+  .input,
+  .thanks,
+  .checkboxes {
+    font-size: .8rem;
+  }
+  .clue {
+    font-size: .75rem;
+  }
+}
+
+footer {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  color: #6262628d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

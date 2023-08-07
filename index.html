@@ -10,7 +10,7 @@
 
       <header class="header">
         <h1 id="title" class="text-center">Customer Service Survey Form</h1>
-        <p id="description" class="description text-center">Thank you for participate in our customer service survey.<span id="description" class="description text-center">Your feedback is invaluable in helping us improve our services.</span></p>
+        <p id="description" class="description text-center">Thank you for participate in our survey.<span id="description" class="description text-center">Your feedback helping us improve our services.</span></p>
       </header>
 
       <form id="survey-form">
@@ -32,21 +32,10 @@
         </div>
         
         <div class="form-group" id="age-input">
-          <input type="number" min="10" max="80" class="input" placeholder="" oninput="this.value=this.value.replace(/[^0-9]/g, '')" oninvalid="setCustomValidity('Your age is not yet permitted')"  required>
+          <input type="number" min="10" max="80" class="input" placeholder=""  oninput="filterNonNumeric(this)" required>
           <span class="highlight"></span>
           <span class="bar"></span>
           <label class="age-label" for="age">Age</label>
-        </div>
-
-        <div class="form-group">
-          <p class="title"><b>How did you hear about our customer service survey?</b><span class="clue">(Please select one option)</span></p>
-          <select id="most-like" name="mostLike" class="form-control" required>
-            <option disabled selected value>Select an option</option>
-            <option value="challenges">Challenges</option>
-            <option value="projects">Projects</option>
-            <option value="community">Community</option>
-            <option value="openSource">Open Source</option>
-          </select>
         </div>
 
         <div class="form-group">
@@ -56,16 +45,16 @@
           </p>
           <p class="sub-question">Overall Experience:</p>
           <div class="rating">
-            <input type="radio" id="star5" name="service-experince" value="5">
-            <label for="star5"></label>
-            <input type="radio" id="star4" name="service-experince" value="4" checked>
-            <label for="star4"></label>
-            <input type="radio" id="star3" name="service-experince" value="3">
-            <label for="star3"></label>
-            <input type="radio" id="star2" name="service-experince" value="2">
-            <label for="star2"></label>
-            <input type="radio" id="star1" name="service-experince" value="1" >
-            <label for="star1"></label>
+            <input type="radio" id="star5-se" name="service-experince" value="5">
+            <label for="star5-se"></label>
+            <input type="radio" id="star4-se" name="service-experince" value="4" checked>
+            <label for="star4-se"></label>
+            <input type="radio" id="star3-se" name="service-experince" value="3">
+            <label for="star3-se"></label>
+            <input type="radio" id="star2-se" name="service-experince" value="2">
+            <label for="star2-se"></label>
+            <input type="radio" id="star1-se" name="service-experince" value="1" >
+            <label for="star1-se"></label>
           </div>
         
         <div class="form-group">
@@ -74,19 +63,31 @@
             <span class="clue">(Scale of 1 to 5, where 1 is "Poor" and 5 is "Excellent)</span>
           </p>
           <p class="sub-question">Clear and effective communication:</p>
-            <label><input name="cs-comuunication" value="poor" type="radio" class="input-radio"/>1</label>
-            <label><input name="cs-comuunication" value="fair" type="radio" class="input-radio"/>2</label>
-            <label><input name="cs-comuunication" value="neutral" type="radio" class="input-radio"/>3</label>
-            <label><input name="cs-comuunication" value="good" type="radio" class="input-radio"/>4</label>
-            <label><input name="cs-comuunication" value="excellent" type="radio" class="input-radio" checked/>5</label
-            >
+          <div class="rating">
+            <input type="radio" id="star5_cs-c" name="cs-communication" value="5">
+            <label for="star5_cs-c"></label>
+            <input type="radio" id="star4_cs-c" name="cs-communication" value="4" checked>
+            <label for="star4_cs-c"></label>
+            <input type="radio" id="star3_cs-c" name="cs-communication" value="3">
+            <label for="star3_cs-c"></label>
+            <input type="radio" id="star2_cs-c" name="cs-communication" value="2">
+            <label for="star2_cs-c"></label>
+            <input type="radio" id="star1_cs-c" name="cs-communication" value="1" >
+            <label for="star1_cs-c"></label>
+          </div>
           <p class="sub-question">Timely responses:</p>
-          <label><input name="cs-responses" value="poor" type="radio" class="input-radio"/>1</label>
-          <label><input name="cs-responses" value="fair" type="radio" class="input-radio"/>2</label>
-          <label><input name="cs-responses" value="neutral" type="radio" class="input-radio"/>3</label>
-          <label><input name="cs-responses" value="good" type="radio" class="input-radio"/>4</label>
-          <label><input name="cs-responses" value="excellent" type="radio" class="input-radio" checked/>5</label>
-        </div>
+          <div class="rating">
+            <input type="radio" id="star5_cs-r" name="cs-responses" value="5">
+            <label for="star5_cs-r"></label>
+            <input type="radio" id="star4_cs-r" name="cs-responses" value="4" checked>
+            <label for="star4_cs-r"></label>
+            <input type="radio" id="star3_cs-r" name="cs-responses" value="3">
+            <label for="star3_cs-r"></label>
+            <input type="radio" id="star2_cs-r" name="cs-responses" value="2">
+            <label for="star2_cs-r"></label>
+            <input type="radio" id="star1_cs-r" name="cs-responses" value="1" >
+            <label for="star1_cs-r"></label>
+          </div>
 
         <div class="form-group">
           <p class="title"><b>Problem Resolution:</b>
@@ -94,19 +95,31 @@
             <span class="clue">(Scale of 1 to 5, where 1 is "Poor" and 5 is "Excellent)</span>
           </p>
           <p class="sub-question">Quality of Problem Resolution:</p>
-            <label><input name="solution-quality" value="poor" type="radio" class="input-radio"/>1</label>
-            <label><input name="solution-quality" value="fair" type="radio" class="input-radio"/>2</label>
-            <label><input name="solution-quality" value="neutral" type="radio" class="input-radio"/>3</label>
-            <label><input name="solution-quality" value="good" type="radio" class="input-radio"/>4</label>
-            <label><input name="solution-quality" value="excellent" type="radio" class="input-radio" checked/>5</label
-            >
+          <div class="rating">
+            <input type="radio" id="star5_q-pr" name="problem-solution" value="5">
+            <label for="star5_q-pr"></label>
+            <input type="radio" id="star4_q-pr" name="problem-solution" value="4" checked>
+            <label for="star4_q-pr"></label>
+            <input type="radio" id="star3_q-pr" name="problem-solution" value="3">
+            <label for="star3_q-pr"></label>
+            <input type="radio" id="star2_q-pr" name="problem-solution" value="2">
+            <label for="star2_q-pr"></label>
+            <input type="radio" id="star1_q-pr" name="problem-solution" value="1" >
+            <label for="star1_q-pr"></label>
+          </div>
           <p class="sub-question">Representative's Understanding:</p>
-          <label><input name="respresentative" value="poor" type="radio" class="input-radio"/>1</label>
-          <label><input name="respresentative" value="fair" type="radio" class="input-radio"/>2</label>
-          <label><input name="respresentative" value="neutral" type="radio" class="input-radio"/>3</label>
-          <label><input name="respresentative" value="good" type="radio" class="input-radio"/>4</label>
-          <label><input name="respresentative" value="excellent" type="radio" class="input-radio" checked/>5</label>
-        </div>
+          <div class="rating">
+            <input type="radio" id="star5_r-u" name="understanding" value="5">
+            <label for="star5_r-u"></label>
+            <input type="radio" id="star4_r-u" name="understanding" value="4" checked>
+            <label for="star4_r-u"></label>
+            <input type="radio" id="star3_r-u" name="understanding" value="3">
+            <label for="star3_r-u"></label>
+            <input type="radio" id="star2_r-u" name="understanding" value="2">
+            <label for="star2_r-u"></label>
+            <input type="radio" id="star1_r-u" name="understanding" value="1" >
+            <label for="star1_r-u"></label>
+          </div>
 
         <div class="form-group">
           <p class="title"><b>Contact Channels: </b>
@@ -118,6 +131,17 @@
           <label class="checkboxes"><input name="contact-channel" value="live-chat" type="checkbox" class="input-checkbox"/>Live Chat</label>
           <label class="checkboxes"><input name="contact-channel" value="socmed" type="checkbox" class="input-checkbox"/>Social Media</label>
           <label class="checkboxes"><input name="contact-channel" value="in-person" type="checkbox" class="input-checkbox"/>In-Person</label>
+        </div>
+
+        <div class="form-group">
+          <p class="title"><b>How did you hear about our customer service survey?</b><span class="clue">(Please select one option)</span></p>
+          <select id="most-like" name="mostLike" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="email-invitation">Email invitation</option>
+            <option value="pop-up">Website pop-up</option>
+            <option value="social-media">Social media post</option>
+            <option value="in-store">In-store signage</option>
+          </select>
         </div>
 
         <div class="form-group">
@@ -136,9 +160,19 @@
         </div>
       </form>
     </div>
+    <footer>
+      <p>This form design by @fxrdhan</p>
+    </footer>
   </body>
   
   <script>
+    
+    function filterNonNumeric(input) {
+      let newValue = input.value.replace(/\D/g, '');
+      newValue = newValue.substring(0, 2);
+      input.value = newValue;
+    }    
+
     const inputElement = document.getElementById('noNumbersInput');
   
     inputElement.addEventListener('input', function(event) {
@@ -148,6 +182,7 @@
       if (inputValue !== sanitizedValue) {
         inputElement.value = sanitizedValue;
       }
+
     });
   </script>  
 </html>
