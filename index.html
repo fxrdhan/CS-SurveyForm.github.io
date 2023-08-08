@@ -1,65 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head></head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="container">
 
-      <header class="header">
-        <h1 id="title" class="text-center">Customer Service Survey Form</h1>
-        <p id="description" class="description text-center">Thank you for participate in our survey.<span id="description" class="description text-center">Your feedback helping us to improve our services.</span></p>
-      </header>
+<head></head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
 
-      <form id="survey-form">
-        <p class="title"><b>Personal Information:</b>
-          <span class="clue">(Please provide your details for our records.)</span>
+</html>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="title" class="text-center">Customer Service Survey Form</h1>
+      <p id="description" class="description text-center">
+        Thank you for participate in our survey.
+        <span id="description" class="description text-center">Your feedback helping us to improve our services.</span>
+      </p>
+    </header>
+    <form id="survey-form">
+      <p class="title">
+        <b>Personal Information:</b>
+        <span class="clue">(Please provide your details for our records.)</span>
+      </p>
+      <div class="form-group" id="name-input">
+        <input type="text" class="input" id="name" placeholder="none" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label id="name-label" class="nameLabel" for="name">Name</label>
+      </div>
+      <div class="form-group" id="email-input">
+        <input type="email" class="input" id="email" placeholder="none" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label id="email-label" class="emailLabel" for="email">Email</label>
+      </div>
+      <div class="form-group" id="age-input">
+        <input type="number" id="number" min="10" max="80" class="input" placeholder="none"
+          oninput="filterNonNumeric(this)" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label id="number-label" class="ageLabel" for="age">Age</label>
+      </div>
+      <div class="form-group">
+        <p class="title">
+          <b>Service Experience:</b>
+          <span class="question">Please rate your overall experience with our customer service</span>
+          <span class="clue">(Scale of 1 to 5, where 1 is "Poor" and 5 is "Excellent)</span>
         </p>
-        <div class="form-group" id="name-input">
-          <input type="text" class="input" id="name" placeholder="none" required>
-          <span class="highlight"></span>
-          <span class="bar"></span>
-          <label id="name-label" class="nameLabel" for="name">Name</label>
+        <p class="sub-question">Overall Experience:</p>
+        <div class="rating">
+          <input type="radio" id="star5-se" name="service-experince" value="5">
+          <label for="star5-se"></label>
+          <input type="radio" id="star4-se" name="service-experince" value="4" checked>
+          <label for="star4-se"></label>
+          <input type="radio" id="star3-se" name="service-experince" value="3">
+          <label for="star3-se"></label>
+          <input type="radio" id="star2-se" name="service-experince" value="2">
+          <label for="star2-se"></label>
+          <input type="radio" id="star1-se" name="service-experince" value="1">
+          <label for="star1-se"></label>
         </div>
-
-        <div class="form-group" id="email-input">
-          <input type="email" class="input" id="email" placeholder="none" required>
-          <span class="highlight"></span>
-          <span class="bar"></span>
-          <label id="email-label" class="emailLabel" for="email">Email</label>
-        </div>
-        
-        <div class="form-group" id="age-input">
-          <input type="number" id="number" min="10" max="80" class="input" placeholder="none" oninput="filterNonNumeric(this)" required>
-          <span class="highlight"></span>
-          <span class="bar"></span>
-          <label id="number-label" class="ageLabel" for="age">Age</label>
-        </div>
-
         <div class="form-group">
-          <p class="title"><b>Service Experience:</b>
-            <span class="question">Please rate your overall experience with our customer service</span>
-            <span class="clue">(Scale of 1 to 5, where 1 is "Poor" and 5 is "Excellent)</span>
-          </p>
-          <p class="sub-question">Overall Experience:</p>
-          <div class="rating">
-            <input type="radio" id="star5-se" name="service-experince" value="5">
-            <label for="star5-se"></label>
-            <input type="radio" id="star4-se" name="service-experince" value="4" checked>
-            <label for="star4-se"></label>
-            <input type="radio" id="star3-se" name="service-experince" value="3">
-            <label for="star3-se"></label>
-            <input type="radio" id="star2-se" name="service-experince" value="2">
-            <label for="star2-se"></label>
-            <input type="radio" id="star1-se" name="service-experince" value="1" >
-            <label for="star1-se"></label>
-          </div>
-        
-        <div class="form-group">
-          <p class="title"><b>Communication:</b>
-            <span class="question">How satisfied were you with the communication from our customer service representatives?</span>
+          <p class="title">
+            <b>Communication:</b>
+            <span class="question">
+              How satisfied were you with the communication from our customer service
+              representatives?
+            </span>
             <span class="clue">(Scale of 1 to 5, where 1 is "Poor" and 5 is "Excellent)</span>
           </p>
           <p class="sub-question">Clear and effective communication:</p>
@@ -72,7 +80,7 @@
             <label for="star3_cs-c"></label>
             <input type="radio" id="star2_cs-c" name="cs-communication" value="2">
             <label for="star2_cs-c"></label>
-            <input type="radio" id="star1_cs-c" name="cs-communication" value="1" >
+            <input type="radio" id="star1_cs-c" name="cs-communication" value="1">
             <label for="star1_cs-c"></label>
           </div>
           <p class="sub-question">Timely responses:</p>
@@ -85,102 +93,135 @@
             <label for="star3_cs-r"></label>
             <input type="radio" id="star2_cs-r" name="cs-responses" value="2">
             <label for="star2_cs-r"></label>
-            <input type="radio" id="star1_cs-r" name="cs-responses" value="1" >
+            <input type="radio" id="star1_cs-r" name="cs-responses" value="1">
             <label for="star1_cs-r"></label>
           </div>
+          <div class="form-group">
+            <p class="title">
+              <b>Problem Resolution:</b>
+              <span class="question">
+                Please rate the quality of the problem resolution and representative's
+                understanding:
+              </span>
+              <span class="clue">(Scale of 1 to 5, where 1 is "Poor" and 5 is "Excellent)</span>
+            </p>
+            <p class="sub-question">Quality of Problem Resolution:</p>
+            <div class="rating">
+              <input type="radio" id="star5_q-pr" name="problem-solution" value="5">
+              <label for="star5_q-pr"></label>
+              <input type="radio" id="star4_q-pr" name="problem-solution" value="4" checked>
+              <label for="star4_q-pr"></label>
+              <input type="radio" id="star3_q-pr" name="problem-solution" value="3">
+              <label for="star3_q-pr"></label>
+              <input type="radio" id="star2_q-pr" name="problem-solution" value="2">
+              <label for="star2_q-pr"></label>
+              <input type="radio" id="star1_q-pr" name="problem-solution" value="1">
+              <label for="star1_q-pr"></label>
+            </div>
+            <p class="sub-question">Representative's Understanding:</p>
+            <div class="rating">
+              <input type="radio" id="star5_r-u" name="understanding" value="5">
+              <label for="star5_r-u"></label>
+              <input type="radio" id="star4_r-u" name="understanding" value="4" checked>
+              <label for="star4_r-u"></label>
+              <input type="radio" id="star3_r-u" name="understanding" value="3">
+              <label for="star3_r-u"></label>
+              <input type="radio" id="star2_r-u" name="understanding" value="2">
+              <label for="star2_r-u"></label>
+              <input type="radio" id="star1_r-u" name="understanding" value="1">
+              <label for="star1_r-u"></label>
+            </div>
+            <div class="form-group">
+              <p class="title">
+                <b>
+                  Contact Channels:
+                </b>
+                <span class="question">
+                  Which communication channels have you used to interact with our customer
+                  service?
+                </span>
+                <span class="clue">(Check all that apply)</span>
+              </p>
+              <label class="checkboxes">
+                <input name="contact-channel" value="phone" type="checkbox" class="input-checkbox">
+                Phone
+              </label>
+              <label class="checkboxes">
+                <input name="contact-channel" value="email" type="checkbox" class="input-checkbox">
+                Email
+              </label>
+              <label class="checkboxes">
+                <input name="contact-channel" value="live-chat" type="checkbox" class="input-checkbox">
+                Live Chat
+              </label>
+              <label class="checkboxes">
+                <input name="contact-channel" value="socmed" type="checkbox" class="input-checkbox">
+                Social Media
+              </label>
+              <label class="checkboxes">
+                <input name="contact-channel" value="in-person" type="checkbox" class="input-checkbox">
+                In-Person
+              </label>
+            </div>
+            <div class="form-group">
+              <p class="title">
+                <b>How did you hear about our customer service survey?</b>
+                <span class="clue">
+                  (Please
+                  select one option)
+                </span>
+              </p>
+              <select id="dropdown" name="sourceForm" class="form-control" required>
+                <option disabled selected value>Select an option</option>
+                <option value="email-invitation">Email invitation</option>
+                <option value="pop-up">Website pop-up</option>
+                <option value="social-media">Social media post</option>
+                <option value="in-store">In-store signage</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <p class="title">
+                <b>Additional Feedback:</b>
+                <span class="question">
+                  Please provide any additional comments or suggestions regarding your customer
+                  service experience.
+                </span>
+              </p>
+              <textarea id="comments" class="input-textarea" name="comment"
+                placeholder="Enter your comment here..."></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit" id="submit" class="submit-button">Submit</button>
+              <div class="class-group">
+                <p class="thanks">
+                  Thank you for taking the time to complete our customer service survey. Your input is
+                  highly appreciated!
+                </p>
+              </div>
+            </div>
+    </form>
+  </div>
+  <footer>
+    <p>This form design by @fxrdhan</p>
+  </footer>
+</body>
+<script>
+  function filterNonNumeric(input) {
+    let newValue = input.value.replace(/\D/g, '');
+    newValue = newValue.substring(0, 2);
+    input.value = newValue;
+  }
 
-        <div class="form-group">
-          <p class="title"><b>Problem Resolution:</b>
-            <span class="question">Please rate the quality of the problem resolution and representative's understanding:</span>
-            <span class="clue">(Scale of 1 to 5, where 1 is "Poor" and 5 is "Excellent)</span>
-          </p>
-          <p class="sub-question">Quality of Problem Resolution:</p>
-          <div class="rating">
-            <input type="radio" id="star5_q-pr" name="problem-solution" value="5">
-            <label for="star5_q-pr"></label>
-            <input type="radio" id="star4_q-pr" name="problem-solution" value="4" checked>
-            <label for="star4_q-pr"></label>
-            <input type="radio" id="star3_q-pr" name="problem-solution" value="3">
-            <label for="star3_q-pr"></label>
-            <input type="radio" id="star2_q-pr" name="problem-solution" value="2">
-            <label for="star2_q-pr"></label>
-            <input type="radio" id="star1_q-pr" name="problem-solution" value="1" >
-            <label for="star1_q-pr"></label>
-          </div>
-          <p class="sub-question">Representative's Understanding:</p>
-          <div class="rating">
-            <input type="radio" id="star5_r-u" name="understanding" value="5">
-            <label for="star5_r-u"></label>
-            <input type="radio" id="star4_r-u" name="understanding" value="4" checked>
-            <label for="star4_r-u"></label>
-            <input type="radio" id="star3_r-u" name="understanding" value="3">
-            <label for="star3_r-u"></label>
-            <input type="radio" id="star2_r-u" name="understanding" value="2">
-            <label for="star2_r-u"></label>
-            <input type="radio" id="star1_r-u" name="understanding" value="1" >
-            <label for="star1_r-u"></label>
-          </div>
+  const inputElement = document.getElementById('name');
 
-        <div class="form-group">
-          <p class="title"><b>Contact Channels: </b>
-            <span class="question">Which communication channels have you used to interact with our customer service?</span>
-            <span class="clue">(Check all that apply)</span>
-          </p>
-          <label class="checkboxes"><input name="contact-channel" value="phone" type="checkbox" class="input-checkbox"/>Phone</label>
-          <label class="checkboxes"><input name="contact-channel" value="email" type="checkbox" class="input-checkbox"/>Email</label>
-          <label class="checkboxes"><input name="contact-channel" value="live-chat" type="checkbox" class="input-checkbox"/>Live Chat</label>
-          <label class="checkboxes"><input name="contact-channel" value="socmed" type="checkbox" class="input-checkbox"/>Social Media</label>
-          <label class="checkboxes"><input name="contact-channel" value="in-person" type="checkbox" class="input-checkbox"/>In-Person</label>
-        </div>
+  inputElement.addEventListener('input', function (event) {
+    let inputValue = event.target.value;
+    let sanitizedValue = inputValue.replace(/[0-9]/g, '');
 
-        <div class="form-group">
-          <p class="title"><b>How did you hear about our customer service survey?</b><span class="clue">(Please select one option)</span></p>
-          <select id="dropdown" name="sourceForm" class="form-control" required>
-            <option disabled selected value>Select an option</option>
-            <option value="email-invitation">Email invitation</option>
-            <option value="pop-up">Website pop-up</option>
-            <option value="social-media">Social media post</option>
-            <option value="in-store">In-store signage</option>
-          </select>
-        </div>
+    if (inputValue !== sanitizedValue) {
+      inputElement.value = sanitizedValue;
+    }
+  });
+</script>
 
-        <div class="form-group">
-          <p class="title"><b>Additional Feedback:</b>
-            <span class="question">Please provide any additional comments or suggestions regarding your customer service experience. </span>
-          </p>
-          <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
-        </div>
-        
-        <div class="form-group">
-          <button type="submit" id="submit" class="submit-button">Submit</button>
-
-        <div class="class-group">
-          <p class="thanks">Thank you for taking the time to complete our customer service survey. Your input is highly appreciated!</p>
-        </div>
-        </div>
-      </form>
-    </div>
-    <footer>
-      <p>This form design by @fxrdhan</p>
-    </footer>
-  </body>
-  
-  <script>
-    function filterNonNumeric(input) {
-      let newValue = input.value.replace(/\D/g, '');
-      newValue = newValue.substring(0, 2);
-      input.value = newValue;
-    }    
-
-    const inputElement = document.getElementById('name');
-  
-    inputElement.addEventListener('input', function(event) {
-      let inputValue = event.target.value;
-      let sanitizedValue = inputValue.replace(/[0-9]/g, ''); 
-      
-      if (inputValue !== sanitizedValue) {
-        inputElement.value = sanitizedValue;
-      }
-    });
-  </script>  
 </html>
