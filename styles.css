@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
 
 *,
 *::before,
 *::after {
-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   font-family: poppins;
-  background-color:beige;
+  background-color: beige;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
-
 }
 
 body::before {
@@ -24,7 +23,9 @@ body::before {
 
 #name-input,
 #email-input {
-  margin-bottom: 1em;}
+  margin-bottom: 1em;
+}
+
 #age-input {
   margin-bottom: 2.75rem;
 }
@@ -46,11 +47,11 @@ body::before {
 
 .header {
   text-align: center;
-  padding: 2rem .625rem;
+  padding: 2rem 0.625rem;
 }
 
 .header span {
-  display:inline-flex;
+  display: inline-flex;
 }
 
 .title {
@@ -59,7 +60,7 @@ body::before {
 
 #title {
   font-size: 2rem;
-  color:darkgoldenrod;
+  color: darkgoldenrod;
 }
 
 .description {
@@ -75,7 +76,7 @@ body::before {
   display: flex;
 }
 
-.sub-question  {
+.sub-question {
   margin-bottom: 5px;
 }
 
@@ -133,7 +134,6 @@ button {
   width: 100%;
   font-family: poppins;
   font-weight: bold;
-
 }
 
 .submit-button:hover {
@@ -154,6 +154,7 @@ button {
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -182,15 +183,15 @@ input::placeholder {
   background: transparent;
 }
 
-input[type='email'] {
+input[type="email"] {
   text-transform: lowercase;
 }
 
-input[type='text'] {
+input[type="text"] {
   text-transform: capitalize;
 }
 
-input[type='radio'] {
+input[type="radio"] {
   margin-left: 0;
 }
 
@@ -213,7 +214,7 @@ input[type='radio'] {
 }
 
 select {
-  padding:.6em 1.4em.5em.8em;
+  padding: 0.6em 1.4em.5em.8em;
   border-radius: 10px;
   border: 2px solid darkgoldenrod;
 }
@@ -222,7 +223,8 @@ option {
   font-family: poppins;
 }
 
-.input:focus ~ label, .input:valid ~ label {
+.input:focus~label,
+.input:valid~label {
   top: -20px;
   font-size: 14px;
   color: darkgoldenrod;
@@ -231,15 +233,16 @@ option {
 .input:invalid {
   color: darkgray;
 }
-  
+
 .bar {
   position: relative;
   display: block;
   width: 300px;
 }
-  
-.bar:before, .bar:after {
-  content: '';
+
+.bar:before,
+.bar:after {
+  content: "";
   height: 2px;
   width: 0;
   bottom: 1px;
@@ -249,19 +252,20 @@ option {
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all;
 }
-  
+
 .bar:before {
   left: 50%;
 }
-  
+
 .bar:after {
   right: 50%;
 }
 
-.input:focus ~ .bar:before, .input:focus ~ .bar:after {
+.input:focus~.bar:before,
+.input:focus~.bar:after {
   width: 50%;
 }
-  
+
 .highlight {
   position: absolute;
   height: 60%;
@@ -272,14 +276,15 @@ option {
   opacity: 0.5;
 }
 
-.input:focus ~ .highlight {
+.input:focus~.highlight {
   animation: inputHighlighter 0.3s ease;
 }
-  
+
 @keyframes inputHighlighter {
   from {
     background: darkgray;
   }
+
   to {
     width: 0;
     background: transparent;
@@ -326,7 +331,8 @@ option {
   align-items: center;
 }
 
-header, #survey-form {
+header,
+#survey-form {
   animation: fadeIn 1s ease-in-out;
 }
 
@@ -344,7 +350,7 @@ header, #survey-form {
   animation: fadeIn 1s ease-in-out;
 }
 
-.rating:not(:checked) > input {
+.rating:not(:checked)>input {
   position: absolute;
   appearance: none;
 }
@@ -354,7 +360,7 @@ header, #survey-form {
   flex-direction: row-reverse;
 }
 
-.rating:not(:checked) > label {
+.rating:not(:checked)>label {
   cursor: pointer;
   font-size: 36px;
   color: #666;
@@ -363,24 +369,24 @@ header, #survey-form {
   margin: 1px;
 }
 
-.rating:not(:checked) > label:before {
-  content: '★';
+.rating:not(:checked)>label:before {
+  content: "★";
 }
 
-.rating > input:checked + label:hover,
-.rating > input:checked + label:hover ~ label,
-.rating > input:checked ~ label:hover,
-.rating > input:checked ~ label:hover ~ label,
-.rating > label:hover ~ input:checked ~ label {
+.rating>input:checked+label:hover,
+.rating>input:checked+label:hover~label,
+.rating>input:checked~label:hover,
+.rating>input:checked~label:hover~label,
+.rating>label:hover~input:checked~label {
   color: orange;
 }
 
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label {
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label {
   color: darkgoldenrod;
 }
 
-.rating > input:checked ~ label {
+.rating>input:checked~label {
   color: darkgoldenrod;
 }
 
@@ -400,26 +406,31 @@ header, #survey-form {
   .header {
     padding-top: 0;
   }
+
   .text-center {
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
+
   .container {
     padding: 20px;
     max-width: 90%;
   }
+
   .title {
     font-size: 1rem;
-  } 
-  .sub-question, 
+  }
+
+  .sub-question,
   .question,
   .label,
   .input,
   .thanks,
   .checkboxes {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
+
   .clue {
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 }
 
